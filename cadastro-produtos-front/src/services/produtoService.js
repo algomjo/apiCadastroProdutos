@@ -20,7 +20,6 @@ export const createProduto = async (produto) => {
 export const updateProduto = async (id, produto) => {
     try {
         // Inclui o ID no corpo da requisição
-        const produtoComId = { ...produto, id };
         // Envia a requisição PUT para atualizar o produto
         const response = await axios.put(`${API_URL}/${id}`, produto);
         console.log("Produto atualizado:", response.data);  // Verifica a resposta da API
