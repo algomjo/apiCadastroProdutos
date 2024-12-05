@@ -59,7 +59,8 @@ namespace CadastroProdutos.Controllers
         {
             if (id != produto.Id)
             {
-                return BadRequest(); // Retorna 400 se os IDs não coincidirem
+                produto.Id = id;
+                //return BadRequest(); // Retorna 400 se os IDs não coincidirem
             }
 
             _context.Entry(produto).State = EntityState.Modified;

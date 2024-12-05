@@ -3,10 +3,18 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Adicionar serviços ao contêiner
-builder.Services.AddRazorPages();
+// Configuração de CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
 
-// Registrar o contexto do banco de dados com resiliência a falhas
+builder.Services.AddRazorPages();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
         sqlOptions => sqlOptions.EnableRetryOnFailure(
@@ -16,17 +24,12 @@ builder.Services.AddDbContext<AppDbContext>(options =>
         )
     )
 );
-
-// Registrar controladores e adicionar Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
-
 var app = builder.Build();
 
-// Configurar o pipeline de requisições HTTP
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -37,18 +40,18 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+// Ativar CORS
+app.UseCors("AllowAll");
+
 app.UseRouting();
-
 app.UseAuthorization();
-
 app.MapControllers();
 app.MapRazorPages();
 
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    dbContext.Database.EnsureCreated(); // Cria o banco de dados se ele não existir
+    dbContext.Database.EnsureCreated();
 }
-
 
 app.Run();
