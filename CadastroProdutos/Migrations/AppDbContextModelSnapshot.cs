@@ -23,11 +23,11 @@ namespace CadastroProdutos.Migrations
 
             modelBuilder.Entity("CadastroProdutos.Models.Produto", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("Descricao")
                         .IsRequired()
@@ -38,6 +38,7 @@ namespace CadastroProdutos.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Preco")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");

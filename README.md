@@ -27,7 +27,7 @@ Este repositório contém uma aplicação completa para gerenciamento de produto
     Acesse o arquivo na pasta ./CadastroProdutos/appsettings.json e atualize a string de conexão para o seu ambiente MySQL:
     ```json
     "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Database=cadastro_produtos;User=root;Password=sua_senha;"
+    "DefaultConnection": "Server=localhost;Database=cadastro_produtos;User=seu_usuario;Password=sua_senha;"
     }
     ```
 3. Execute as migrações para criar o banco de dados:
@@ -88,20 +88,6 @@ A interface estará disponível em http://localhost:3000.
 - `CadastroProdutos/`: Código-fonte da API .NET.
 - `cadastro-produtos-front/`: Código-fonte do frontend em React.
 
-## 🤝 **Contribuição**
-Contribuições são bem-vindas! Siga as etapas abaixo para colaborar:
-1. Faça um fork do repositório.
-2. Crie uma branch para sua feature/correção:
-   ```bash
-   git checkout -b minha-feature
-
-3. Envie suas alterações:
-    ```bash
-    git commit -m "Descrição da feature"
-    git push origin minha-feature`
-    ```
-
-4. Abra um Pull Request no repositório principal.
 
 
 **Autor:** [Alexandre Gomes de Araújo - algomjo](https://github.com/algomjo)  
