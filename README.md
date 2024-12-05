@@ -64,15 +64,16 @@ A interface estará disponível em http://localhost:3000.
 
 ## 🛠 **Funcionalidades**
 - **Frontend**:
-  - Cadastro de novos produtos.
+  - Cadastro de novos produtos. 
+  - Exibição de uma lista de produtos.
   - Edição de produtos existentes.
   - Exclusão de produtos.
-  - Exibição de uma lista de produtos.
+
 - **Backend**:
   - API RESTful com operações CRUD para gerenciamento de produtos.
   - Banco de dados MySQL para armazenamento persistente.
 
-  ## 📊 **Diagrama do Banco de Dados **
+  ## 📊 Diagrama do Banco de Dados
 
     ```mermaid
     erDiagram

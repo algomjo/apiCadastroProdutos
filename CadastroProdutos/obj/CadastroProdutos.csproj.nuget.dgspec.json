@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\GitHub\\CadastroProdutos\\CadastroProdutos\\CadastroProdutos.csproj": {}
+    "D:\\Documentos\\github\\CadastroProdutos\\CadastroProdutos\\CadastroProdutos.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\GitHub\\CadastroProdutos\\CadastroProdutos\\CadastroProdutos.csproj": {
+    "D:\\Documentos\\github\\CadastroProdutos\\CadastroProdutos\\CadastroProdutos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\GitHub\\CadastroProdutos\\CadastroProdutos\\CadastroProdutos.csproj",
+        "projectUniqueName": "D:\\Documentos\\github\\CadastroProdutos\\CadastroProdutos\\CadastroProdutos.csproj",
         "projectName": "CadastroProdutos",
-        "projectPath": "D:\\Documentos\\GitHub\\CadastroProdutos\\CadastroProdutos\\CadastroProdutos.csproj",
+        "projectPath": "D:\\Documentos\\github\\CadastroProdutos\\CadastroProdutos\\CadastroProdutos.csproj",
         "packagesPath": "C:\\Users\\algom\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\GitHub\\CadastroProdutos\\CadastroProdutos\\obj\\",
+        "outputPath": "D:\\Documentos\\github\\CadastroProdutos\\CadastroProdutos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

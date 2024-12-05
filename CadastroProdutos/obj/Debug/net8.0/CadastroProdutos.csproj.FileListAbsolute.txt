@@ -168,7 +168,6 @@ D:\Documentos\GitHub\CadastroProdutos\CadastroProdutos\obj\Debug\net8.0\staticwe
 D:\Documentos\GitHub\CadastroProdutos\CadastroProdutos\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.CadastroProdutos.props
 D:\Documentos\GitHub\CadastroProdutos\CadastroProdutos\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.CadastroProdutos.props
 D:\Documentos\GitHub\CadastroProdutos\CadastroProdutos\obj\Debug\net8.0\staticwebassets.pack.json
-D:\Documentos\GitHub\CadastroProdutos\CadastroProdutos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Documentos\GitHub\CadastroProdutos\CadastroProdutos\obj\Debug\net8.0\Cadastro.A1C52496.Up2Date
 D:\Documentos\GitHub\CadastroProdutos\CadastroProdutos\obj\Debug\net8.0\CadastroProdutos.dll
 D:\Documentos\GitHub\CadastroProdutos\CadastroProdutos\obj\Debug\net8.0\refint\CadastroProdutos.dll
