@@ -34,14 +34,14 @@ namespace CadastroProdutos.Controllers
 
             if (produto == null)
             {
-                return NotFound(); // Retorna 404 caso o produto não seja encontrado
+                return NotFound(); 
             }
 
             return produto;
         }
 
         // POST: api/produtos
-        // Cria um novo produto
+        // Cria um produto
         [HttpPost]
         public async Task<ActionResult<Produto>> PostProduto(Produto produto)
         {
@@ -60,7 +60,6 @@ namespace CadastroProdutos.Controllers
             if (id != produto.Id)
             {
                 produto.Id = id;
-                //return BadRequest(); // Retorna 400 se os IDs não coincidirem
             }
 
             _context.Entry(produto).State = EntityState.Modified;
@@ -73,7 +72,7 @@ namespace CadastroProdutos.Controllers
             {
                 if (!ProdutoExists(id))
                 {
-                    return NotFound(); // Retorna 404 se o produto não existir
+                    return NotFound(); 
                 }
                 else
                 {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createProduto, updateProduto, getProdutoById } from "../services/produtoService";
-import "./ProdutoForm.css"; // Importe o arquivo CSS para estilizar
+import "./ProdutoForm.css"; 
 
 const ProdutoForm = ({ produtoId, onProdutoSaved, onCancel }) => {
     const [nome, setNome] = useState("");
@@ -13,7 +13,7 @@ const ProdutoForm = ({ produtoId, onProdutoSaved, onCancel }) => {
                 const produto = await getProdutoById(produtoId);
                 setNome(produto.nome);
                 setPreco(produto.preco.toFixed(2));
-                setDescricao(produto.descricao); // Definindo a descrição
+                setDescricao(produto.descricao); 
             };
             fetchProduto();
         } else {
@@ -35,7 +35,7 @@ const ProdutoForm = ({ produtoId, onProdutoSaved, onCancel }) => {
                 await createProduto(produto);
             }
     
-            onProdutoSaved(); // Notifica o componente pai sobre a conclusão
+            onProdutoSaved(); 
         } catch (error) {
             console.error("Erro ao salvar produto:", error.response ? error.response.data : error.message);
         }

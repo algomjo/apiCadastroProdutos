@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getProdutos, deleteProduto } from "../services/produtoService";
-import "./ProdutoList.css"; // Importe o arquivo CSS para estilizar
+import "./ProdutoList.css"; 
 
 const ProdutoList = ({ onEdit, onProdutoDeleted }) => {
     const [produtos, setProdutos] = useState([]);
@@ -17,7 +17,7 @@ const ProdutoList = ({ onEdit, onProdutoDeleted }) => {
     const handleDelete = async (id) => {
         if (window.confirm("Deseja realmente excluir este produto?")) {
             await deleteProduto(id);
-            onProdutoDeleted(); // Notifica o componente pai sobre a exclusão
+            onProdutoDeleted(); 
         }
     };
 

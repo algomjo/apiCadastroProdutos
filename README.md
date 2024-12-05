@@ -20,6 +20,7 @@ Este repositório contém uma aplicação completa para gerenciamento de produto
 1. Clone o repositório:
    ```bash
    git clone https://github.com/algomjo/apiCadastroProdutos.git
+   cd apiCadastroProdutos\CadastroProdutos
    ```
   
 2. Configure o banco de dados no arquivo appsettings.json:
@@ -39,9 +40,13 @@ Este repositório contém uma aplicação completa para gerenciamento de produto
     ```bash
     dotnet run
     ```
+A interface estará disponível em http://localhost:5042/index.html
 
 ### **Frontend**
-1. Acesse a pasta do frontend
+1. Acesse a pasta do frontend:
+    ```bash
+      cd apiCadastroProdutos\cadastro-produtos-front
+    ```
 
 2. Instale as Dependências:
     ```bash

@@ -15,7 +15,7 @@ function App() {
     const handleProdutoSaved = () => {
         setIsEditing(false);
         setProdutoId(null);
-        setRefresh(!refresh); // Força a atualização da lista
+        setRefresh(!refresh); //Atualiza a lista
     };
 
     const handleCancel = () => {
@@ -24,7 +24,7 @@ function App() {
     };
 
     const handleProdutoDeleted = () => {
-        setRefresh(!refresh); // Força a atualização da lista
+        setRefresh(!refresh); //Atualiza a lista
     };
 
     return (

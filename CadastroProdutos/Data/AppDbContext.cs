@@ -11,10 +11,10 @@ namespace CadastroProdutos.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configurar a propriedade 'Preco' com precisão e escala.
+            
             modelBuilder.Entity<Produto>()
                 .Property(p => p.Preco)
-                .HasPrecision(18, 2); // Define a precisão como 18 e a escala como 2 (ex: 1234567890.12)
+                .HasPrecision(18, 2); 
 
             base.OnModelCreating(modelBuilder);
         }
