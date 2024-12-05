@@ -6,8 +6,9 @@ Este repositório contém uma aplicação completa para gerenciamento de produto
 ## 📋 **Pré-requisitos**
 - **Backend**
   - [.NET SDK 9.0](https://dotnet.microsoft.com/download/dotnet/9.0)
-  - [MySQL](https://www.mysql.com/)
-  - Visual Studio 2022 ou outro editor compatível
+  - [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
+  - [Visual Studio](https://visualstudio.microsoft.com/pt-br/) (ou outra IDE/editor compatível)
+
 - **Frontend**
   - [Node.js](https://nodejs.org/) (versão LTS recomendada)
   - Gerenciador de pacotes `npm` (incluído no Node.js)
@@ -100,6 +101,7 @@ Contribuições são bem-vindas! Siga as etapas abaixo para colaborar:
     ```
 
 4. Abra um Pull Request no repositório principal.
+
 
 **Autor:** [Alexandre Gomes de Araújo - algomjo](https://github.com/algomjo)  
 **Repositório:** [https://github.com/algomjo/apiCadastroProdutos](https://github.com/algomjo/apiCadastroProdutos)
