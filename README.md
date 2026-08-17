@@ -1,99 +1,105 @@
-# README - API de Cadastro de Produtos
+# Cadastro de Produtos
 
-Este repositório contém uma aplicação completa para gerenciamento de produtos, composta por uma API em **.NET** para o backend e uma interface desenvolvida em **React** para o frontend. Abaixo estão as instruções de instalação, configuração, execução e o diagrama do banco de dados.
+Aplicação **full stack** para gerenciamento de produtos, com backend em **ASP.NET Core Web API**, persistência em **SQL Server** via Entity Framework Core e frontend em **React** consumindo a API REST.
 
+## Tecnologias
 
-## 📋 **Pré-requisitos**
-- **Backend**
-  - [.NET SDK 9.0](https://dotnet.microsoft.com/download/dotnet/9.0)
-  - [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
-  - [Visual Studio](https://visualstudio.microsoft.com/pt-br/) (ou outra IDE/editor compatível)
+### Backend
 
-- **Frontend**
-  - [Node.js](https://nodejs.org/) (versão LTS recomendada)
-  - Gerenciador de pacotes `npm` (incluído no Node.js)
+- C# / .NET 8
+- ASP.NET Core Web API
+- Entity Framework Core
+- SQL Server
+- Swagger / OpenAPI
+- CORS
 
+### Frontend
 
-## ⚙️ **Configuração**
+- React 18
+- JavaScript
+- Axios
+- React Scripts
 
-### **Backend**
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/algomjo/apiCadastroProdutos.git
-   cd apiCadastroProdutos\CadastroProdutos
-   ```
-  
-2. Configure o banco de dados no arquivo appsettings.json:
+## Funcionalidades
 
-    Acesse o arquivo na pasta ./CadastroProdutos/appsettings.json e atualize a string de conexão para o seu ambiente MySQL:
-    ```json
-    "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Database=cadastro_produtos;User=seu_usuario;Password=sua_senha;"
-    }
-    ```
-3. Execute as migrações para criar o banco de dados:
-    ```bash
-    dotnet ef database update
-    ```
+- Cadastro de produtos.
+- Listagem dos produtos cadastrados.
+- Edição de produtos existentes.
+- Exclusão de produtos.
+- API REST para operações CRUD.
+- Persistência dos dados em SQL Server.
+- Interface React integrada ao backend por HTTP.
+- Documentação interativa da API com Swagger em ambiente de desenvolvimento.
 
-4. Execute a API:
-    ```bash
-    dotnet run
-    ```
-A interface estará disponível em http://localhost:5042/index.html
+## Estrutura do projeto
 
-### **Frontend**
-1. Acesse a pasta do frontend:
-    ```bash
-      cd apiCadastroProdutos\cadastro-produtos-front
-    ```
+```text
+CadastroProdutos/          Backend ASP.NET Core
+├── Controllers/           Endpoints da API
+├── Data/                  Contexto de acesso a dados
+├── Models/                Entidades da aplicação
+├── Migrations/            Estrutura do banco de dados
+└── Program.cs             Configuração da aplicação
 
-2. Instale as Dependências:
-    ```bash
-    npm install
-    ```
+cadastro-produtos-front/   Frontend React
+└── src/                   Componentes e serviços da interface
+```
 
-3. Configure a URL da API no frontend:
-No arquivo src/services/produtoService.js, certifique-se de que o valor de API_URL aponta para o backend:
-    ```javascript
-    const API_URL = "http://localhost:5042/api/Produtos";
-    ```
+## Executando o backend
 
-4. Execute o frontend:
-    ```bash
-    npm start
-    ```
+Pré-requisitos:
 
-A interface estará disponível em http://localhost:3000.
+- .NET SDK 8
+- SQL Server
 
+Clone o repositório e acesse o projeto da API:
 
-## 🛠 **Funcionalidades**
-- **Frontend**:
-  - Cadastro de novos produtos. 
-  - Exibição de uma lista de produtos.
-  - Edição de produtos existentes.
-  - Exclusão de produtos.
+```bash
+git clone https://github.com/algomjo/apiCadastroProdutos.git
+cd apiCadastroProdutos/CadastroProdutos
+```
 
-- **Backend**:
-  - API RESTful com operações CRUD para gerenciamento de produtos.
-  - Banco de dados MySQL para armazenamento persistente.
+Configure `ConnectionStrings:DefaultConnection` em `appsettings.json` para uma instância SQL Server disponível no seu ambiente.
 
-  ## 📊 Diagrama do Banco de Dados
+Depois execute:
 
-    ```mermaid
-    erDiagram
-        Produto {
-            int Id PK "Identificador único do produto"
-            string Nome "Nome do produto"
-            decimal Preco "Preço do produto"
-            string Descricao "Descrição do produto"
-        }
+```bash
+dotnet restore
+dotnet run
+```
 
-## 📂 **Estrutura do Repositório**
-- `CadastroProdutos/`: Código-fonte da API .NET.
-- `cadastro-produtos-front/`: Código-fonte do frontend em React.
+Em ambiente de desenvolvimento, o Swagger é disponibilizado na raiz da aplicação.
 
+## Executando o frontend
 
+Em outro terminal:
 
-**Autor:** [Alexandre Gomes de Araújo - algomjo](https://github.com/algomjo)  
-**Repositório:** [https://github.com/algomjo/apiCadastroProdutos](https://github.com/algomjo/apiCadastroProdutos)
+```bash
+cd apiCadastroProdutos/cadastro-produtos-front
+npm install
+npm start
+```
+
+Por padrão, o frontend do Create React App será iniciado em `http://localhost:3000`.
+
+A URL utilizada para consumir a API pode ser ajustada no serviço do frontend conforme o endereço em que o backend estiver executando.
+
+## Arquitetura
+
+O frontend React é responsável pela interface e envia requisições HTTP para a API ASP.NET Core. O backend concentra as regras de acesso aos dados e utiliza Entity Framework Core com o provider do SQL Server para persistência.
+
+```text
+React
+  │
+  │ HTTP / JSON
+  ▼
+ASP.NET Core Web API
+  │
+  │ Entity Framework Core
+  ▼
+SQL Server
+```
+
+---
+
+Desenvolvido por [Alexandre Gomes de Araújo](https://github.com/algomjo).
